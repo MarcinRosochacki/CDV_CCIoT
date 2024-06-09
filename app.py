@@ -3,9 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import pyodbc
 
 app = Flask(__name__)
-
-# Zaktualizowany ciąg połączenia
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc:///?odbc_connect=Driver={ODBC Driver 18 for SQL Server};Server=tcp:cdvsql.database.windows.net,1433;Database=playersdb;UID=CloudSAdf1267c1;PWD={iTree!15};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryPassword'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc:///?odbc_connect=Driver={ODBC Driver 18 for SQL Server};Server=tcp:cdvsql.database.windows.net,1433;Database=playersdb;Uid=;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryIntegrated'
 
 db = SQLAlchemy(app)
 
